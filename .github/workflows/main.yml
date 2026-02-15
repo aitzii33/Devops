@@ -1,0 +1,19 @@
+name: solucion-CI
+
+on: push
+
+jobs:
+  Unit-Tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+     
+      - name: set up jdk 13
+        uses: actions/setup-java@v3.3.0
+        with:
+          distribution: adopt
+          java-version: 17
+      - run: mvn package -DskipTests
+      - run: mvn test
