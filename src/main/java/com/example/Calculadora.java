@@ -16,7 +16,7 @@ public class Calculadora {
         return a * b;
     }
 
-    public float diveded (int a, int b)
+    public float divide (float a, float b)
     {
         return a / b;
     }
